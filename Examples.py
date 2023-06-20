@@ -281,3 +281,47 @@ mylist = ["gamal", "saad", "amr", "ahmed", "adel", "alaa"]
 # check_key(mydict,mykey)
 
 # ----------------------------------------------------------------------------------------------------
+# [15]
+# Write a Python program to add 'ing' at the end of a given string (length should be at least 3).
+# If the given string already ends with 'ing', add 'ly' instead.
+# If the string length of the given string is less than 3, leave it unchanged.
+
+# string = "string"
+string = "abc"
+
+
+def addstring(mystr):
+    if len(mystr) >= 3:
+        if mystr[3:] == "ing":
+            mystr += "ly"
+
+        else:
+            mystr += "ing"
+
+    return mystr
+
+
+# print(addstring(string))
+
+# -------------------------------------------------------------------------------------
+# [16]
+# Write a Python function that takes two lists and returns True if they have at least one common member
+
+listone = [2, "d", True]
+listtwo = [3, "w", False]
+
+
+def common_element(lsone, lstwo):
+    result = False
+
+    for x in lsone:
+        for s in lstwo:
+            if x == s:
+                result = True
+
+    return result
+
+
+print(common_element(listone, listtwo))
+
+# -----------------------------------------------------------------
