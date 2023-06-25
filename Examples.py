@@ -322,6 +322,50 @@ def common_element(lsone, lstwo):
     return result
 
 
-print(common_element(listone, listtwo))
+# print(common_element(listone, listtwo))
 
 # -----------------------------------------------------------------
+# [17]
+# Write a Python program to find the first appearance of the substrings 'not' and 'poor' in a given string.
+# If 'not' follows 'poor', replace the whole 'not'...'poor' substring with 'good'. Return the resulting string.
+
+sample_String = "The lyrics is not that poor!"
+# sample_String = "The lyrics is poor!"
+
+
+def addgood(str):
+    fnot = str.find("not")
+    fpoor = str.find("poor")
+
+    if fpoor > fnot and fnot > 0 and fpoor > 0:
+        str = str.replace(str[fnot : (fpoor + 4)], "good")
+
+        return str
+
+    else:
+        return str
+
+
+# print(addgood(sample_String))
+
+# -----------------------------------------------------------------------------------------------------
+# [18]
+# Write a Python function that takes a list of words and return the longest word and the length of the longest one.
+
+sample_list = ["python", "excel", "powerpi", "sql", "machine_learning"]
+
+
+def longest(ls):
+    result = []
+
+    for word in ls:
+        result.append((len(word), word))
+
+        result.sort()
+    print(result)
+
+    return f"the longest word is : {result[-1][1]} \nthe length of longest word is : {result[-1][0]} "
+
+
+# print(longest(sample_list))
+# -------------------------------------------------------------------------------------------------
