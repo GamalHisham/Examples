@@ -369,3 +369,79 @@ def longest(ls):
 
 # print(longest(sample_list))
 # -------------------------------------------------------------------------------------------------
+# [19]
+# Write a Python program to remove the n index character from a nonempty string
+
+mystr = "python"
+
+
+def remove_char(string, n):
+    fpart = string[:n]
+    lpart = string[n + 1 :]
+
+    return f"removed index {n} and the result {fpart + lpart}"
+
+
+# print(remove_char(mystr, 2))
+# print(remove_char(mystr, 0))
+
+# ----------------------------------------------------------------------------------------------------
+# [20]
+# Write a Python program to change a given string to a newly string where the first and last chars have been exchanged.
+
+mystr = "abcd"  # result => dbca
+
+
+def change_sring(str1):
+    return str1[-1:] + str1[1:-1] + str1[:1]
+
+
+# print(change_sring(mystr))
+
+# -------------------------------------------------------------------------------------
+# [21]
+# Write a Python function that takes two lists and returns True if they have at least one common member
+
+# ls1 = [1, 2, 3, 4]
+# ls2 = [11, 22, 2, 44]
+
+
+# def find_common(l1, l2):
+#     for element in l1:
+#         for elme in l2:
+#             if elme == element:
+#                 return f"{True} and the common element is : {elme}"
+
+
+# print(find_common(ls1, ls2))
+
+# --------------------------------------------------------------------------------------------------
+# [22]
+# Write a Python program to remove characters that have odd index values in a given string
+
+s = "python"  # => "pto"
+
+
+# def rem_odd(string):
+#     s1 = ""
+
+#     for ele in range(len(string)):
+#         if ele % 2 == 0:
+#             s1 = s1 + string[ele]
+
+#     return s1
+
+# another sol
+
+# def rem_odd(string):
+#     s1 = ""
+
+#     for ele in string:
+#         if string.index(ele) % 2 == 0:
+#             s1 = s1 + ele
+
+#     return s1
+
+
+# print(rem_odd(s))
+# ---------------------------------------------------------------------------------------
